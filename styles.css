@@ -1,0 +1,99 @@
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+header {
+    color: #fff;
+    text-align: center;
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    /* width: 100vw; */
+}
+
+header::-webkit-scrollbar {
+    display: none;
+}
+
+.tagButton {
+    padding: 10px 20px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    text-wrap: nowrap;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease-out, padding 0.1s ease-out;
+}
+
+.active {
+    background-color: black;
+    color: white
+}
+
+.tagButton:hover {
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    padding: 10px 24px;
+}
+
+main {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.quoteDiv {
+    flex: 1 0 200px;
+    padding: 10px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.author {
+    text-align: right;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.authorImg {
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid lightgray;
+}
+
+.quoteButtonsDiv {
+    display: flex;
+    border-top: 1px solid lightgray;
+    padding-top: 8px;
+    margin-top: 8px;
+    width: 100%;
+}
+
+.quoteButton {
+    padding: 0px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: large;
+}
