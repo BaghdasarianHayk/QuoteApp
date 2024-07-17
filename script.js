@@ -71,12 +71,18 @@ fetch('https://api.quotable.io/quotes')
                 quoteButton.textContent = "❤️";
             }
         });
+        const shareButton = document.createElement('button');
+        shareButton.className = "quoteButton";
+        shareButton.textContent = "🌐";
+        shareButton.addEventListener('click', () => shareContent(quote.author, quote.content));
+
         const translateButton = document.createElement('button');
         translateButton.className = "quoteButton";
-        translateButton.textContent = "🔗";
-        translateButton.addEventListener('click', () => shareContent(quote.author, quote.content));
+        translateButton.textContent = "🇷🇺";
+        translateButton.addEventListener('click', () => window.open(`https://translate.google.com/?sl=en&tl=ru&text=${quote.content}&op=translate`, '_blank'));
 
         quoteButtonsDiv.appendChild(quoteButton);
+        quoteButtonsDiv.appendChild(shareButton);
         quoteButtonsDiv.appendChild(translateButton);
 
         quoteDiv.appendChild(contentDiv);
