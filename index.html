@@ -3,28 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+AU+VIC:wght@100..400&display=swap" rel="stylesheet">
     <title>Quotes App</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <button id="AllTagsButton" class="tagButton active">
-            All
+        <button id="allTagsButton" class="tagButton active">
+            All Quotes
+        </button>
+        <button id="likedQuotesButton" class="tagButton">
+            ❤️ Liked Quotes
+        </button>
+        <button id="myQuotesButton" class="tagButton">
+            👤 My Quotes
         </button>
     </header>
     <main>
-        <div class="quoteDiv">
+        <form id="addQuoteForm" class="addQuoteDiv">
             <div class="content">
-                <a class="author"><img class="authorImg" src="https://images.quotable.dev/profile/200/ralph-waldo-emerson.jpg" />Henry Ward Beecher</a>
+                <div class="authorInputDiv">
+                    <p>👤</p>
+                    <input required name="authorInput" id="authorInput" placeholder="Type author name" type="text" class="authorInput"></input>
+                </div>
                 <hr />
-                <p class="quote">soul, and paints his own nature int</p>
+                <textarea required placeholder="Type a quote" type="text" id="quoteInput" name="quoteInput" class="quoteInput"></textarea>
             </div>
             <div class="quoteButtonsDiv">
-                <button class="quoteButton">
-                    🤍
+                <button type="submit" class="quoteButton">
+                    ➕
                 </button>
             </div>
-        </div>
+        </form>
     </main>
     <footer>
     </footer>

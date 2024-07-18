@@ -18,7 +18,6 @@ header {
     overflow-x: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
-    /* width: 100vw; */
 }
 
 header::-webkit-scrollbar {
@@ -32,6 +31,8 @@ header::-webkit-scrollbar {
     text-wrap: nowrap;
     cursor: pointer;
     transition: box-shadow 0.3s ease-out, padding 0.1s ease-out;
+    color: black;
+    background-color: white;
 }
 
 .active {
@@ -53,14 +54,16 @@ main {
     gap: 20px;
 }
 
-.quoteDiv {
-    flex: 1 0 200px;
+.quoteDiv, .addQuoteDiv {
+    flex: 1 0 300px;
     padding: 10px;
     border: 1px solid lightgray;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color: white;
+    max-width: 720px;
 }
 
 .author {
@@ -82,6 +85,14 @@ hr {
     border-top: 1px solid lightgray;
 }
 
+.quote {
+    font-family: "Playwrite AU VIC", cursive;
+    font-optical-sizing: auto;
+    font-size: 25px;
+    font-weight: 600;
+    font-style: normal;
+}
+
 .quoteButtonsDiv {
     display: flex;
     border-top: 1px solid lightgray;
@@ -97,4 +108,37 @@ hr {
     background-color: transparent;
     cursor: pointer;
     font-size: large;
+}
+
+.authorInputDiv {
+    display: flex;
+    gap: 10px
+}
+
+.authorInput {
+    width: 100%;
+    border: none;
+}
+
+.authorInput:focus {
+    border: none;
+    outline: none;
+}
+
+.quoteInput {
+    width: 100%;
+    height: 100%;
+    resize: none;
+    border: none;
+    box-sizing: border-box;
+    font-family: "Playwrite AU VIC", cursive;
+    font-optical-sizing: auto;
+    font-size: 25px;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.quoteInput:focus {
+    border: none;
+    outline: none;
 }
