@@ -27,8 +27,7 @@ By clicking on tags, users can choose specific tags to filter the quotes. The nu
 
 ## Adding New Quotes
 
-![App Screenshot](https://i.ibb.co/HtM6H7Y/image.png)
-
+![App Screenshot](https://i.ibb.co/9tqzRFT/image.png)
 
 Users can add their own quotes, which are saved locally to ensure persistence even after the browser session is refreshed.
 
