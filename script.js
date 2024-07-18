@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const fetchQuotes = async () => {
         try {
-            const response = await fetch(`https://api.quotable.io/quotes?page=${currentPage}&tags=${selectedTags.join("|")}`);
+            const response = await fetch(`https://api.quotable.io/quotes?sortBy=length&page=${currentPage}&tags=${selectedTags.join("|")}`);
             if (!response.ok) {
                 throw new Error('Network response was not ok.');
             }
@@ -51,14 +51,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    const fetchLikedQuotes = () => renderQuotes(likedQuotes);
-    const fetchMyQuotes = () => renderQuotes(myQuotes, true);
+    const fetchLikedQuotes = () => renderQuotes(likedQuotes.reverse());
+    const fetchMyQuotes = () => renderQuotes(myQuotes.reverse(), true);
 
     const renderQuotes = (quotesToRender = quotes) => {
         document.querySelectorAll('.quoteDiv').forEach(element => {
             element.remove();
         });
-        quotesToRender.reverse().forEach(quote => {
+        quotesToRender.forEach(quote => {
             main.appendChild(createQuoteElement(quote));
         });
     };
@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
             await navigator.share({ title, text });
         } catch (error) {
-            alert('Error sharing:', error);
+            console.log('Error sharing:', error);
         }
     };
 
